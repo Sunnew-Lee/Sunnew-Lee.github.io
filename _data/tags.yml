@@ -1,3 +1,21 @@
+gitpage:
+  name: github page
+  description: False
+  cover: assets/images/speeches.jpg #tag background 
+cpp:
+  name: cpp
+  description: False
+  cover: False
+math:
+  name: math
+  description: False
+  cover: False
+
+
+
+
+
+
 speeches:
   name: speeches
   description: Some of the greatest words ever spoken.

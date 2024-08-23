@@ -1,16 +1,35 @@
 # Jekyll configuration
 markdown: kramdown
 highlighter: rouge
-paginate: 100 # it will paginate after this number
-language: 'en-uk'
+paginate: 20 # it will paginate after this number
+language: 'ko-KR'
+timzone: Asia/Seoul
 words_per_minute: 200
 
+# MyData
+owner:
+  name: Sunwoo Lee
+  avatar:
+  bio:  "The mighty blog owner"
+  email: sunwoo9078@gmail.com
+  #SNS
+  twitter:
+  facebook:
+  github:
+  stackexchange:
+  linkedin:
+  instagram:
+  flickr:
+  tumblr:
+  # google plus id, include the '+', eg +mmistakes
+  google_plus:
+
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
-baseurl: /jasper2/
+baseurl: /
 
 # Website info
 title: Sunwoo Lee's Blog
-description: The professional publishing platform
+description: My Personal Dev Blog
 cover: assets/images/blog-cover.jpg
 logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
@@ -22,12 +41,12 @@ navigation: True # show the navbar links
 subscribers: True # you need to connect an external service for this to work,
 # if 'True' the submit button is disabled for now, but you can change that
 # by editing `_includes/subscribe-form.html`
-twitter: tryghost # replace by your username
-facebook: ghost # replace by your username
+twitter:  # replace by your username
+facebook:  # replace by your username
 
 # Disqus
-disqus: False
-disqus_shortname: jekyllt # replace with your disqus username
+disqus: True
+disqus_shortname: SWL # replace with your disqus username
 
 # Google Analytics
 google_analytics: UA-69281367-1 # replace with your GA tracking identifier
@@ -42,7 +61,7 @@ permalink: /:title
 
 # gems and other configs
 plugins_dir: [_plugins]
-plugins: [jekyll-paginate, jekyll-feed]
+plugins: [jekyll-paginate, jekyll-feed, jekyll-gist]
 
 feed:
   path: feed.xml
@@ -67,29 +86,40 @@ feed:
 # or "master" otherwise
 safe: False
 lsi: False
+
 username: Sunnew-Lee
 repo: Sunnew-Lee.github.io
 branch: master
-relative_source: ../jasper2/
-destination: ../jasper2-pages/
-production_url:  https://jekyllt.github.io/jasper2/
-source_url:  https://github.com/jekyllt/jasper2/
+relative_source: 
+destination: ./[GitHubPage]/ # ./output/
+production_url:  https://sunnew-lee.github.io/
+source_url:  https://github.com/sunnew-lee/
 
 exclude:
-  - assets/css
-  - node_modules
-  - vendor
-  - .travis.yml
+  - README.md
+  - Rakefile
   - Gemfile
   - Gemfile.lock
+  - changelog.md
+  - "*.Rmd"
+  - vendor
+  - .travis.yml
+  - node_modules
+  - assets/css
+  - assets/images
+#  - posts/angular
+#  - posts/et-cetera
+#  - posts/python
+#  - posts/typescript
+#  - posts/jekyll
+#  - posts/iot
+#  - posts/r
+#  - posts/economy
+  
   - GHOST.txt
   - gulpfile.js
   - LICENSE
   - package.json
   - package-lock.json
-  - Rakefile
-  - README.md
   - script.py
-  - changelog.md
-  - "*.Rmd"
   - .git*
