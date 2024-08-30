@@ -6,23 +6,23 @@ language: 'ko-KR'
 timzone: Asia/Seoul
 words_per_minute: 200
 
-# MyData
-owner:
-  name: Sunwoo Lee
-  avatar:
-  bio:  "The mighty blog owner"
-  email: sunwoo9078@gmail.com
-  #SNS
-  twitter:
-  facebook:
-  github:
-  stackexchange:
-  linkedin:
-  instagram:
-  flickr:
-  tumblr:
-  # google plus id, include the '+', eg +mmistakes
-  google_plus:
+# # MyData
+# owner:
+#   name: Sunwoo Lee
+#   avatar:
+#   bio:  "The mighty blog owner"
+#   email: sunwoo9078@gmail.com
+#   #SNS
+#   twitter:
+#   facebook:
+#   github:
+#   stackexchange:
+#   linkedin:
+#   instagram:
+#   flickr:
+#   tumblr:
+#   # google plus id, include the '+', eg +mmistakes
+#   google_plus:
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: /
@@ -30,10 +30,10 @@ baseurl: /
 # Website info
 title: Sunwoo Lee's Blog
 description: My Personal Dev Blog
-cover: assets/images/blog-cover.jpg
-logo: assets/images/blog-icon.png
-logo_dark: assets/images/favicon.png
-favicon: assets/images/favicon.png
+cover: assets/images/locked.jpg
+logo: False # assets/images/blog-icon.png
+logo_dark: False # assets/images/icon_256.ico
+favicon: assets/images/icon_256.ico
 CNAME: #add cname for website to be created
 
 # Social info
@@ -106,7 +106,7 @@ exclude:
   - .travis.yml
   - node_modules
   - assets/css
-  - assets/images
+#  - assets/images
 #  - posts/angular
 #  - posts/et-cetera
 #  - posts/python
