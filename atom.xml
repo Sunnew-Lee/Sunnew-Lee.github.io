@@ -1,28 +1,104 @@
----
-layout: null
----
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ site.name | xml_escape }} - Articles</title>
-    <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
+    <title> - Articles</title>
+    <description>My Personal Dev Blog</description>
     <link>
-    {{ site.url }}</link>
-    {% for post in site.posts %}
-      {% unless post.link %}
+    </link>
+    
+      
       <item>
-        <title>{{ post.title | xml_escape }}</title>
-        {% if post.excerpt %}
-          <description>{{ post.excerpt | xml_escape }}</description>
-        {% else %}
-          <description>{{ post.content | xml_escape }}</description>
-        {% endif %}
-        <pubDate>{{ post.date | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
+        <title>Github Page 강좌(2) - 나만의 블로그 만들기</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Github Page 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./gitpage_test&quot;&gt;Github Page 강좌(1) - 리포지토리 만들기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./gitpage_1&quot;&gt;Github Page 강좌(2) - 나만의 블로그 만들기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Thu, 29 Aug 2024 11:13:00 +0900</pubDate>
         <link>
-        {{ site.url }}{{ post.url }}</link>
-        <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
+        /gitpage_1</link>
+        <guid isPermaLink="true">/gitpage_1</guid>
       </item>
-      {% endunless %}
-    {% endfor %}
+      
+    
+      
+      <item>
+        <title>Github Page 강좌(1) - 리포지토리 만들기</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Github Page 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./gitpage_test&quot;&gt;Github Page 강좌(1) - 리포지토리 만들기&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./gitpage_1&quot;&gt;Github Page 강좌(2) - 나만의 블로그 만들기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Fri, 23 Aug 2024 22:53:00 +0900</pubDate>
+        <link>
+        /gitpage_test</link>
+        <guid isPermaLink="true">/gitpage_test</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>C++ Test post</title>
+        
+          <description>&lt;p&gt;Hey! Welcome to my Blog! C++&lt;/p&gt;
+</description>
+        
+        <pubDate>Fri, 23 Aug 2024 22:53:00 +0900</pubDate>
+        <link>
+        /c++_test</link>
+        <guid isPermaLink="true">/c++_test</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Math Test Post</title>
+        
+          <description>&lt;p&gt;Hey! Welcome to my Blog! Math :)&lt;/p&gt;
+</description>
+        
+        <pubDate>Fri, 23 Aug 2024 17:11:00 +0900</pubDate>
+        <link>
+        /welcome-to-my-blog</link>
+        <guid isPermaLink="true">/welcome-to-my-blog</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>fake Math Test Post</title>
+        
+          <description>&lt;p&gt;Hey! Welcome to my Blog! fake Math :)&lt;/p&gt;
+</description>
+        
+        <pubDate>Fri, 22 Jul 2022 00:01:00 +0900</pubDate>
+        <link>
+        /fake</link>
+        <guid isPermaLink="true">/fake</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>fake C++ Test post</title>
+        
+          <description>&lt;p&gt;Hey! Welcome to my Blog! fake C++&lt;/p&gt;
+</description>
+        
+        <pubDate>Tue, 22 Jan 2019 22:53:00 +0900</pubDate>
+        <link>
+        /c++_test</link>
+        <guid isPermaLink="true">/c++_test</guid>
+      </item>
+      
+    
   </channel>
 </rss>

@@ -11,7 +11,7 @@
 
 
 
-    <title>Sunwoo Lee's Blog</title>
+    <title>Sunwoo Lee - Sunwoo Lee's Blog</title>
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles'n'Scripts -->
@@ -38,19 +38,19 @@
     <!-- This tag outputs SEO meta+structured data and other important settings -->
     <meta name="description" content="My Personal Dev Blog" />
     <link rel="shortcut icon" href="/assets/images/icon_256.ico" type="image/png" />
-    <link rel="canonical" href="/" />
+    <link rel="canonical" href="/author/sunwoo/" />
     <meta name="referrer" content="no-referrer-when-downgrade" />
 
      <!--title below is coming from _includes/dynamic_title-->
     <meta property="og:site_name" content="Sunwoo Lee's Blog" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Sunwoo Lee's Blog" />
+    <meta property="og:title" content="Sunwoo Lee - Sunwoo Lee's Blog" />
     <meta property="og:description" content="My Personal Dev Blog" />
-    <meta property="og:url" content="/" />
+    <meta property="og:url" content="/author/sunwoo/" />
     <meta property="og:image" content="/assets/images/locked.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sunwoo Lee's Blog" />
+    <meta name="twitter:title" content="Sunwoo Lee - Sunwoo Lee's Blog" />
     <meta name="twitter:description" content="My Personal Dev Blog" />
     <meta name="twitter:url" content="/" />
     <meta name="twitter:image" content="/assets/images/locked.jpg" />
@@ -70,7 +70,7 @@
         "name": "Sunwoo Lee's Blog",
         "logo": "/false"
     },
-    "url": "/",
+    "url": "/author/sunwoo/",
     "image": {
         "@type": "ImageObject",
         "url": "/assets/images/locked.jpg",
@@ -79,7 +79,7 @@
     },
     "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "/"
+        "@id": "/author/sunwoo/"
     },
     "description": "My Personal Dev Blog"
 }
@@ -94,31 +94,29 @@
     </script> -->
 
     <meta name="generator" content="Jekyll 3.6.2" />
-    <link rel="alternate" type="application/rss+xml" title="Sunwoo Lee's Blog" href="/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Author Page" href="/feed.xml" />
 
 
 </head>
-<body class="home-template">
+<body class="author-template">
 
     <div class="site-wrapper">
         <!-- All the main content gets inserted here, index.hbs, post.hbs, etc -->
-        <!-- < default -->
-<!-- The tag above means: insert everything in this file
-into the {body} of the default.hbs template -->
+        <!-- < default}} -->
+<!-- The tag above means - insert everything in this file into the {body} of the default.hbs template -->
 
-<!-- The big featured header, it uses blog cover image as a BG if available -->
-<header class="site-header outer " style="background-image:  url(/assets/images/locked.jpg) ">
-    <div class="inner">
-        <div class="site-header-content">
-            <h1 class="site-title">
-                
-                    Sunwoo Lee's Blog
-                
-            </h1>
-            <h2 class="site-description">My Personal Dev Blog</h2>
-        </div>
-        <nav class="site-nav">
+<!-- #author  -->
+<!-- Everything inside the #author tags pulls data from the author -->
+
+    
+    <header class="site-header outer no-cover">
+        <div class="inner">
+            <nav class="site-nav">
     <div class="site-nav-left">
+        
+            
+                <a class="site-nav-logo" href="/">Sunwoo Lee's Blog</a>
+            
         
         
             <ul class="nav" role="menu">
@@ -153,8 +151,34 @@ into the {body} of the default.hbs template -->
     </div>
 </nav>
 
-    </div>
-</header>
+            <div class="site-header-content">
+                
+                    <img class="author-profile-image" src="/assets/images/SWL.jpg" alt="sunwoo" />
+                
+                <h1 class="site-title">Sunwoo Lee</h1>
+                
+                    <h2 class="author-bio">Main blogger</h2>
+                
+                <div class="author-meta">
+                    
+                    <div class="author-stats">
+                        6 posts <span class="bull">&bull;</span>
+                    </div>
+                    
+                        <a class="social-link social-link-wb" href="http://sunnew-lee.github.io/" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.5 11.957c0 6.375-5.163 11.544-11.532 11.544C5.599 23.5.5 18.125.5 11.75.5 5.542 5.37.758 11.505.511l.5-.011C18.374.5 23.5 5.582 23.5 11.957zM11.505.511c-6 6.5-6 14.98 0 22.98m1-22.98c6 6.5 6 14.977 0 22.977M2 17.479h20.063m-19.657-12h19.062m-20.968 6h22.938" stroke="#000" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></svg>
+</a>
+                    
+                    
+                    
+                    <a class="social-link social-link-rss" href="https://feedly.com/i/subscription/feed//author/sunwoo/feed.xml" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="6.18" cy="17.82" r="2.18"/><path d="M4 4.44v2.83c7.03 0 12.73 5.7 12.73 12.73h2.83c0-8.59-6.97-15.56-15.56-15.56zm0 5.66v2.83c3.9 0 7.07 3.17 7.07 7.07h2.83c0-5.47-4.43-9.9-9.9-9.9z"/></svg>
+</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+
+<!-- /author -->
 
 <!-- The main content area -->
 <main id="site-main" class="site-main outer" role="main">
@@ -165,7 +189,7 @@ into the {body} of the default.hbs template -->
             
 
 
-    <article class="post-card home-template">
+    <article class="post-card author-template">
         
             <a class="post-card-image-link" href="/gitpage_1">
                 <div class="post-card-image" style="background-image: url(/assets/images/piano.jpg)"></div>
@@ -217,7 +241,54 @@ into the {body} of the default.hbs template -->
         </div>
     </article>
 
-    <article class="post-card home-template">
+    <article class="post-card author-template">
+        
+            <a class="post-card-image-link" href="/c++_test">
+                <div class="post-card-image" style="background-image: url(/assets/images/grapes.jpg)"></div>
+            </a>
+        
+        <div class="post-card-content">
+            <a class="post-card-content-link" href="/c++_test">
+                <header class="post-card-header">
+                    
+                        
+                            
+                                <span class="post-card-tags">Cpp</span>
+                            
+                        
+                    
+
+                    <h2 class="post-card-title">C++ Test post</h2>
+                </header>
+                <section class="post-card-excerpt">
+                    
+                        <p>Hey! Welcome to my Blog! C++
+</p>
+                    
+                </section>
+            </a>
+            <footer class="post-card-meta">
+                
+                    
+                        
+                        <img class="author-profile-image" src="/assets/images/SWL.jpg" alt="Sunwoo Lee" />
+                        
+                        <span class="post-card-author">
+                            <a href="/author/sunwoo/">Sunwoo Lee</a>
+                        </span>
+                    
+                
+                <span class="reading-time">
+                    
+                    
+                      1 min read
+                    
+                </span>
+            </footer>
+        </div>
+    </article>
+
+    <article class="post-card author-template">
         
             <a class="post-card-image-link" href="/gitpage_test">
                 <div class="post-card-image" style="background-image: url(/assets/images/piano.jpg)"></div>
@@ -269,54 +340,7 @@ into the {body} of the default.hbs template -->
         </div>
     </article>
 
-    <article class="post-card home-template">
-        
-            <a class="post-card-image-link" href="/c++_test">
-                <div class="post-card-image" style="background-image: url(/assets/images/grapes.jpg)"></div>
-            </a>
-        
-        <div class="post-card-content">
-            <a class="post-card-content-link" href="/c++_test">
-                <header class="post-card-header">
-                    
-                        
-                            
-                                <span class="post-card-tags">Cpp</span>
-                            
-                        
-                    
-
-                    <h2 class="post-card-title">C++ Test post</h2>
-                </header>
-                <section class="post-card-excerpt">
-                    
-                        <p>Hey! Welcome to my Blog! C++
-</p>
-                    
-                </section>
-            </a>
-            <footer class="post-card-meta">
-                
-                    
-                        
-                        <img class="author-profile-image" src="/assets/images/SWL.jpg" alt="Sunwoo Lee" />
-                        
-                        <span class="post-card-author">
-                            <a href="/author/sunwoo/">Sunwoo Lee</a>
-                        </span>
-                    
-                
-                <span class="reading-time">
-                    
-                    
-                      1 min read
-                    
-                </span>
-            </footer>
-        </div>
-    </article>
-
-    <article class="post-card home-template">
+    <article class="post-card author-template">
         
             <a class="post-card-image-link" href="/welcome-to-my-blog">
                 <div class="post-card-image" style="background-image: url(/assets/images/hannah-cover.jpg)"></div>
@@ -363,7 +387,7 @@ into the {body} of the default.hbs template -->
         </div>
     </article>
 
-    <article class="post-card home-template">
+    <article class="post-card author-template">
         
             <a class="post-card-image-link" href="/fake">
                 <div class="post-card-image" style="background-image: url(/assets/images/hannah.jpg)"></div>
@@ -410,7 +434,7 @@ into the {body} of the default.hbs template -->
         </div>
     </article>
 
-    <article class="post-card home-template">
+    <article class="post-card author-template">
         
             <a class="post-card-image-link" href="/c++_test">
                 <div class="post-card-image" style="background-image: url(/assets/images/summit.jpg)"></div>
