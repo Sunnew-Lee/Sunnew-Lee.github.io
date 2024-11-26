@@ -1,83 +1,1048 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-11-25T00:00:00+09:00</updated><id>/feed.xml</id><title type="html">Sunwoo Lee’s Blog</title><subtitle>My Personal Dev Blog</subtitle><entry><title type="html">algorithm no.1</title><link href="/algo_hi" rel="alternate" type="text/html" title="algorithm no.1" /><published>2024-11-23T21:25:00+09:00</published><updated>2024-11-23T21:25:00+09:00</updated><id>/algo_hi</id><content type="html" xml:base="/algo_hi">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Algorithm 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./algo_hi&quot;&gt;Algorithm 강좌(1) - 리포지토리 만들기&lt;/a&gt;&lt;/li&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./gitpage_1&quot;&gt;Algorithm 강좌(2) - 나만의 블로그 만들기&lt;/a&gt;&lt;/li&gt; --&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2024-11-27T01:51:39+09:00</updated><id>/feed.xml</id><title type="html">Sunwoo Lee’s Blog</title><subtitle>My Personal Dev Blog</subtitle><entry><title type="html">BOJ 1158) 요세푸스 문제</title><link href="/algo_list_2" rel="alternate" type="text/html" title="BOJ 1158) 요세푸스 문제" /><published>2024-11-27T01:27:00+09:00</published><updated>2024-11-27T01:27:00+09:00</updated><id>/algo_list_2</id><content type="html" xml:base="/algo_list_2">&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;N명의 사람이 있으면 남은 사람이 없을때까지 다음 k번째 사람을 매번 탈락시키는 문제. 탈락된 사람의 번호를 순서대로 출력하라.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;!--&lt;script src=&quot;https://gist.github.com/Sunnew-Lee/7402881b991a555e04e5d7cd1e06ab6f.js&quot;&gt;&lt;/script&gt;--&gt;
-&lt;noscript&gt;&lt;pre&gt;#include &amp;lt;iostream&amp;gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;constraints&quot;&gt;Constraints&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;시간 제한(Seconds)&lt;/th&gt;
+      &lt;th&gt;메모리 제한(MB)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;256&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;noscript&gt;&lt;pre&gt;/*
+author: sunwoo.lee
+date: 11.27.2024
+*/
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;numeric&amp;gt;  // for iota
+#include &amp;lt;list&amp;gt;
 using namespace std;
 
 int main()
 {
-  ios::sync_with_stdio(0);
-  cin.tie(0);
-  // check comments
-  // 한글은 어때?
-  // check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/
-  cout&amp;lt;&amp;lt;&amp;quot;Test edit\n&amp;quot;;
-  cout&amp;lt;&amp;lt;&amp;quot;check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/check length/\n&amp;quot;;
-  
-  cout&amp;lt;&amp;lt;&amp;quot;Test height\n&amp;quot;;
-  cout&amp;lt;&amp;lt;&amp;quot;Test height\n&amp;quot;;
-  cout&amp;lt;&amp;lt;&amp;quot;Test height\n&amp;quot;;
-  cout&amp;lt;&amp;lt;&amp;quot;Test height\n&amp;quot;;
-  cout&amp;lt;&amp;lt;&amp;quot;Test height\n&amp;quot;;
-  
-  cout&amp;lt;&amp;lt;&amp;quot;Test height\n&amp;quot;;
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  cout&amp;lt;&amp;lt;&amp;quot;Test height\n&amp;quot;;
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  cout&amp;lt;&amp;lt;&amp;quot;Test height\n&amp;quot;;
-  return 0;
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int size, k;
+    cin &amp;gt;&amp;gt; size &amp;gt;&amp;gt; k;
+
+    list&amp;lt;int&amp;gt; list(size);
+    iota(list.begin(), list.end(), 1);
+    auto temp = list.begin();
+    cout &amp;lt;&amp;lt; &amp;#39;&amp;lt;&amp;#39;;
+    while (size--)
+    {
+        for (int i{ 1 }; i &amp;lt; k; i++)
+        {
+            temp++;
+            if (temp == list.end())
+            {
+                temp = list.begin();
+            }                        
+        }
+        cout &amp;lt;&amp;lt; *temp;
+        temp = list.erase(temp);
+        if (list.empty())
+        {
+            cout &amp;lt;&amp;lt; &amp;#39;&amp;gt;&amp;#39;;
+        }
+        else
+        {
+            cout &amp;lt;&amp;lt; &amp;quot;, &amp;quot;;
+        }
+        if (temp == list.end())
+        {
+            temp = list.begin();
+        }
+    }
+
+    return 0;
 }&lt;/pre&gt;&lt;/noscript&gt;
-&lt;script src=&quot;https://gist.github.com/Sunnew-Lee/7402881b991a555e04e5d7cd1e06ab6f.js&quot;&gt; &lt;/script&gt;</content><author><name>Sunwoo Lee</name></author><category term="algorithm" /><summary type="html">Algorithm 강좌는 여러 절로 구성되어 있습니다. Algorithm 강좌(1) - 리포지토리 만들기</summary></entry><entry><title type="html">Github Page 강좌(2) - 나만의 블로그 만들기</title><link href="/gitpage_1" rel="alternate" type="text/html" title="Github Page 강좌(2) - 나만의 블로그 만들기" /><published>2024-08-29T11:13:00+09:00</published><updated>2024-08-29T11:13:00+09:00</updated><id>/gitpage_1</id><content type="html" xml:base="/gitpage_1">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Github Page 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./gitpage_test&quot;&gt;Github Page 강좌(1) - 리포지토리 만들기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./gitpage_1&quot;&gt;Github Page 강좌(2) - 나만의 블로그 만들기&lt;/a&gt;&lt;/li&gt;
+&lt;script src=&quot;https://gist.github.com/Sunnew-Lee/7e7a5a277ecdb99e989514d40b966094.js&quot;&gt; &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;처음에 총 인원수 만큼 list를 만들고 번호를 매긴다. 이후, list가 빌때까지 k번만큼 temp를 증가시켜주고, 출력한다.&lt;/li&gt;
+  &lt;li&gt;temp가 list의 마지막 인자를 넘겼다면, 처음으로 보낸다.&lt;/li&gt;
+  &lt;li&gt;예제 출력을 잘 보자. Format을 안지켜서 삽질을 조금 했다.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Hey! Welcome to my Blog! Github Page 2&lt;/p&gt;</content><author><name>Sunwoo Lee</name></author><category term="gitpage" /><summary type="html">Github Page 강좌는 여러 절로 구성되어 있습니다. Github Page 강좌(1) - 리포지토리 만들기 Github Page 강좌(2) - 나만의 블로그 만들기</summary></entry><entry><title type="html">Github Page 강좌(1) - 리포지토리 만들기</title><link href="/gitpage_test" rel="alternate" type="text/html" title="Github Page 강좌(1) - 리포지토리 만들기" /><published>2024-08-23T22:53:00+09:00</published><updated>2024-08-23T22:53:00+09:00</updated><id>/gitpage_test</id><content type="html" xml:base="/gitpage_test">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Github Page 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
-&lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./gitpage_test&quot;&gt;Github Page 강좌(1) - 리포지토리 만들기&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&quot;./gitpage_1&quot;&gt;Github Page 강좌(2) - 나만의 블로그 만들기&lt;/a&gt;&lt;/li&gt;
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;추천링크&quot;&gt;추천링크&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1158&quot;&gt;1158) 요세푸스 문제 풀러가기&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Hey! Welcome to my Blog! Github Page&lt;/p&gt;</content><author><name>Sunwoo Lee</name></author><category term="gitpage" /><summary type="html">Github Page 강좌는 여러 절로 구성되어 있습니다. Github Page 강좌(1) - 리포지토리 만들기 Github Page 강좌(2) - 나만의 블로그 만들기</summary></entry><entry><title type="html">C++ Test post</title><link href="/c++_test" rel="alternate" type="text/html" title="C++ Test post" /><published>2024-08-23T22:53:00+09:00</published><updated>2024-08-23T22:53:00+09:00</updated><id>/c++_test</id><content type="html" xml:base="/c++_test">&lt;p&gt;Hey! Welcome to my Blog! C++&lt;/p&gt;</content><author><name>Sunwoo Lee</name></author><category term="cpp" /><summary type="html">Hey! Welcome to my Blog! C++</summary></entry><entry><title type="html">Math Test Post</title><link href="/welcome-to-my-blog" rel="alternate" type="text/html" title="Math Test Post" /><published>2024-08-23T17:11:00+09:00</published><updated>2024-08-23T17:11:00+09:00</updated><id>/welcome-to-my-blog</id><content type="html" xml:base="/welcome-to-my-blog">&lt;p&gt;Hey! Welcome to my Blog! Math :)&lt;/p&gt;</content><author><name>Sunwoo Lee</name></author><category term="math" /><summary type="html">Hey! Welcome to my Blog! Math :)</summary></entry><entry><title type="html">fake Math Test Post</title><link href="/fake" rel="alternate" type="text/html" title="fake Math Test Post" /><published>2022-07-22T00:01:00+09:00</published><updated>2022-07-22T00:01:00+09:00</updated><id>/fake</id><content type="html" xml:base="/fake">&lt;p&gt;Hey! Welcome to my Blog! fake Math :)&lt;/p&gt;</content><author><name>Sunwoo Lee</name></author><category term="math" /><summary type="html">Hey! Welcome to my Blog! fake Math :)</summary></entry><entry><title type="html">fake C++ Test post</title><link href="/c++_test" rel="alternate" type="text/html" title="fake C++ Test post" /><published>2019-01-22T22:53:00+09:00</published><updated>2019-01-22T22:53:00+09:00</updated><id>/c++_test</id><content type="html" xml:base="/c++_test">&lt;p&gt;Hey! Welcome to my Blog! fake C++&lt;/p&gt;</content><author><name>Sunwoo Lee</name></author><category term="cpp" /><summary type="html">Hey! Welcome to my Blog! fake C++</summary></entry></feed>
+&lt;hr /&gt;</content><author><name>Sunwoo Lee</name></author><category term="algorithm" /><summary type="html">Problem Overview</summary></entry><entry><title type="html">BOJ 1406) 에디터</title><link href="/algo_list_1" rel="alternate" type="text/html" title="BOJ 1406) 에디터" /><published>2024-11-27T01:16:00+09:00</published><updated>2024-11-27T01:16:00+09:00</updated><id>/algo_list_1</id><content type="html" xml:base="/algo_list_1">&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;문자 에디터에 입력된 명령어를 토대로 특정 자리에 문자를 추가하거나 제거해서 결과 문자열을 출력하는 문제.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;constraints&quot;&gt;Constraints&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;시간 제한(Seconds)&lt;/th&gt;
+      &lt;th&gt;메모리 제한(MB)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0.3&lt;/td&gt;
+      &lt;td&gt;512&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;noscript&gt;&lt;pre&gt;/*
+author: sunwoo.lee
+date: 11.27.2024
+*/
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;string&amp;gt;
+#include &amp;lt;list&amp;gt;
+using namespace std;
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    string text;
+    int count;
+    cin &amp;gt;&amp;gt; text &amp;gt;&amp;gt; count;
+    list&amp;lt;char&amp;gt; list;
+    for (char c : text)
+    {
+        list.push_back(c);
+    }
+
+    auto cursor = list.end();
+    char c;
+    while (count--)
+    {
+        cin &amp;gt;&amp;gt; c;
+        if (c == &amp;#39;L&amp;#39;)//L	move cursor one character to the left (if cursor is at the beginning, do nothing)
+        {
+            if (cursor == list.begin())
+                continue;
+            cursor--;
+        }
+        else if (c == &amp;#39;D&amp;#39;)//D	move cursor one character to the right (if cursor is at the end, do nothing)
+        {
+            if (cursor == list.end())
+                continue;
+            cursor++;
+        }
+        else if (c == &amp;#39;B&amp;#39;)//B	delete character left of the cursor (if cursor is at the beginning, do nothing)
+        {
+            if (cursor == list.begin())
+                continue;
+            cursor--;
+            cursor = list.erase(cursor);
+        }
+        else//P $	add character $ right of the cursor (character $ is any lowercase letter of English alphabet)
+        {
+            cin &amp;gt;&amp;gt; c;
+            list.insert(cursor, c);
+        }
+    }
+
+    for (auto l : list)
+    {
+        cout &amp;lt;&amp;lt; l;
+    }
+
+    return 0;
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/Sunnew-Lee/5b1edec5ce5401a8afecd5f1d6f967f4.js&quot;&gt; &lt;/script&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;처음에는 string과 cursor를 인덱스 취급해서 풀어봤다.(타임아웃)&lt;/li&gt;
+  &lt;li&gt;두번째 풀이는 list를 이용하지만 여전히 cursor를 인덱스 취급하여 문자를 추가하거나 제거할때마다 next(list.begin(), cursor)를 해주었다.(타임아웃)&lt;/li&gt;
+  &lt;li&gt;마지막으로 list를 이용하면서 cursor를 list의 iterator로 두고 푸니 성공했다.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;추천링크&quot;&gt;추천링크&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1406&quot;&gt;1406) 에디터 풀러가기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/5397&quot;&gt;5397) 키로거 풀러가기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>Sunwoo Lee</name></author><category term="algorithm" /><summary type="html">Problem Overview</summary></entry><entry><title type="html">STL list</title><link href="/algo_list" rel="alternate" type="text/html" title="STL list" /><published>2024-11-27T00:01:00+09:00</published><updated>2024-11-27T00:01:00+09:00</updated><id>/algo_list</id><content type="html" xml:base="/algo_list">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Algorithm &amp;amp; Data Structure &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_tips&quot;&gt;코테 팁 모음&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_array&quot;&gt;Data Structure (1) - Array &amp;amp; STL vector&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_list&quot;&gt;Data Structure (2) - STL list&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;자료구조-2---stl-list&quot;&gt;자료구조 (2) - STL list&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-특성&quot;&gt;📌 &lt;strong&gt;특성&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;List 자료구조의 특성은 다음과 같다:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;메모리 상 원소들이 불연속해서 할당이 비교적 쉽다.
+    &lt;ul&gt;
+      &lt;li&gt;배열, STL vector와의 가장 큰 차이점이다.&lt;/li&gt;
+      &lt;li&gt;불연속하기 때문에 Cache hit rate가 낮다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;메모리 overhead가 있다.(각 원소들이 단/양방향에 따라 주소를 저장할 공간이 하나/두개 필요하다)&lt;/li&gt;
+  &lt;li&gt;임의의 원소 k에 접근(Access) - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;값 탐색(Search) - 첫번째 원소부터 마지막까지 특정 값을 탐색한다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;삽입(Insertion) - 앞 뒤로 주소만 이어주면 된다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(1)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;제거(Deletion)- 앞 뒤로 주소만 이어주면 된다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(1)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;💡 Tip:
+    list는 삽입 및 삭제 연산이 빈번히 요구되는 작업에 적합하다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-종류&quot;&gt;📌 &lt;strong&gt;종류&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;List의 종류는 크게 세가지로 나눌 수 있다:&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;단방향 연결 리스트(Singly linked list) - 각 원소가 다음 원소의 주소를 가지고있음.&lt;/li&gt;
+  &lt;li&gt;양방향 연결 리스트(Doubly linked list) - 각 원소가 전 원소와 다음 원소의 주소를 모두 가지고있음.&lt;/li&gt;
+  &lt;li&gt;원형 연결 리스트(Circular linked list) - 마지막 원소가 첫 원소의 주소를 가지고있음. 양방향 연결이라면 첫 원소가 전 원소의 주소로 마지막 원소의 주소를 가짐.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;list&amp;gt;   // STL list include
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// 원소 10개에 초기값 100&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;front&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// O(1) {99,100,100,100,100}&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;     &lt;span class=&quot;c1&quot;&gt;// O(1) {99,100,100,100,101}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;auto&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// list&amp;lt;int&amp;gt;::iterator&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;insert&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//  O(1) {99,50,100,100,100,101} 50을 가리키는 주소 반환&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;erase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;// O(1) {50,100,100,100,101} 50을 가리키는 주소 반환&lt;/span&gt;
+
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// O(n)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;l&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// O(n) loop with iterator&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;it&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;101&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;문제풀이&quot;&gt;문제풀이&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;./algo_list_1&quot;&gt;BOJ 1406) 에디터&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;./algo_list_2&quot;&gt;BOJ 1158) 요세푸스 문제&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;출처&quot;&gt;출처&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.encrypted.gg/932&quot;&gt;BaaaaaaaarkingDog님의 실전 알고리즘 강좌 0x04강 - 연결리스트&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;추천-링크&quot;&gt;추천 링크&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cplusplus.com/reference/list/list/&quot;&gt;list의 메소드 확인&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cplusplus.com/reference/forward_list/forward_list/&quot;&gt;forward_list의 메소드 확인&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>Sunwoo Lee</name></author><category term="algorithm" /><summary type="html">Algorithm &amp;amp; Data Structure 코테 팁 모음 Data Structure (1) - Array &amp;amp; STL vector Data Structure (2) - STL list</summary></entry><entry><title type="html">BOJ 1919) 애너그램 만들기</title><link href="/algo_array_2" rel="alternate" type="text/html" title="BOJ 1919) 애너그램 만들기" /><published>2024-11-26T23:47:00+09:00</published><updated>2024-11-26T23:47:00+09:00</updated><id>/algo_array_2</id><content type="html" xml:base="/algo_array_2">&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;문자의 순서만 바꿔서 같아질수 있는 두 단어를 애너그램 관계에 있다고 한다.&lt;/li&gt;
+  &lt;li&gt;두 문자열에서 애너그램 관계가 되도록 제거해야 하는 최소 개수의 문자 수를 구하는 문제.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;constraints&quot;&gt;Constraints&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;시간 제한(Seconds)&lt;/th&gt;
+      &lt;th&gt;메모리 제한(MB)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;128&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;noscript&gt;&lt;pre&gt;/*
+author: sunwoo.lee
+date: 11.26.2024
+*/
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;cmath&amp;gt;
+using namespace std;
+
+int arr[26];
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    string str1, str2;
+    cin &amp;gt;&amp;gt; str1 &amp;gt;&amp;gt; str2;
+
+
+    for (char c : str1)
+    {
+        arr[c - &amp;#39;a&amp;#39;]++;
+    }
+    for (char c : str2)
+    {
+        arr[c - &amp;#39;a&amp;#39;]--;
+    }
+
+    int answer{ 0 };
+    for (int n : arr)
+    {
+        answer += abs(n);
+    }
+
+    cout &amp;lt;&amp;lt; answer;
+
+    return 0;
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/Sunnew-Lee/3b111e29d587943288012cf4ecb95bd0.js&quot;&gt; &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;두 문자열이 가지고 있는 문자들의 갯수가 같으면 애너그램 관계이다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;먼저 첫 문자열의 알파벳 등장횟수를 배열에 기록 후, 두번째 문자열의 알파벳 등장횟수만큼 배열에서 빼준다.&lt;/p&gt;
+    &lt;ul&gt;
+      &lt;li&gt;두 문자열의 관계가 애너그램이라면 배열을 모두 더했을때 0이 될것이고, 차이가 있다면 그만큼이 애너그램 관계를 만들기 위해 제거해야하는 최소한의 문자들의 갯수인 것이다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;추천링크&quot;&gt;추천링크&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/1919&quot;&gt;1919) 애너그램 만들기 풀러가기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>Sunwoo Lee</name></author><category term="algorithm" /><summary type="html">Problem Overview</summary></entry><entry><title type="html">BOJ 3273) 두 수의 합</title><link href="/algo_array_1" rel="alternate" type="text/html" title="BOJ 3273) 두 수의 합" /><published>2024-11-26T16:14:00+09:00</published><updated>2024-11-26T16:14:00+09:00</updated><id>/algo_array_1</id><content type="html" xml:base="/algo_array_1">&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;수열이 주어질때, a+b = x를 만족하는 쌍 수를 구하는 문제이다.(순서는 a가 항상 b보다 빠르다)&lt;/li&gt;
+  &lt;li&gt;서로 다른 양의 정수가 들어오기 때문에, 1~100000의 수가 수열에 존재했는지 여부를 알 수 있는 배열과 수열에 들어있는 양의 정수들을 담는 배열이 필요하다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;constraints&quot;&gt;Constraints&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;시간 제한(Seconds)&lt;/th&gt;
+      &lt;th&gt;메모리 제한(MB)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;128&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;수열의 요소들은 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1 ≤ k ≤ 1000000&lt;/code&gt;인 자연수&lt;/li&gt;
+  &lt;li&gt;수열의 크기는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1 ≤ n ≤ 100000&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;x는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1 ≤ x ≤ 2000000&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;noscript&gt;&lt;pre&gt;/*
+author: sunwoo.lee
+date: 11.26.2024
+*/
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+using namespace std;
+
+bool arr[2000001];  // 자연수는 최대 1000000이지만, x는 2000000까지 들어온다. arr[1000001]로 설정 시, 이후 arr[x-num]에서 array out of bound 가능성 있다.
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    int size, num;
+    cin &amp;gt;&amp;gt; size;
+
+    int store[100000];  //수열 보관
+    for (int i{ 0 }; i &amp;lt; size; i++)
+    {
+        cin &amp;gt;&amp;gt; num;
+        arr[num] = true;
+        store[i] = num;
+    }
+
+    cin &amp;gt;&amp;gt; num; // num이 x다.
+    int answer{ 0 };
+    for (int i{ 0 }; i &amp;lt; size; i++)
+    {
+        if (store[i]&amp;gt;=num || store[i]*2==num) 
+            continue;// x가 더 작으면 음수 인덱스 탐색 or arr[num - store[i]]==arr[store[i]] 방지(store=2, x=4이면 자기자신만 확인함)
+        if (arr[num - store[i]])  // arr[1000001]로 설정했다면 num - store[i]가 그걸 넘지 않도록 예외 처리해줘야한다.
+        {
+            answer++;
+            arr[store[i]] = false;
+        }
+
+    }
+    cout &amp;lt;&amp;lt; answer;
+    return 0;
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/Sunnew-Lee/2b1d27a5fd96012c3ee4c6f994398e3d.js&quot;&gt; &lt;/script&gt;
+
+&lt;p&gt;두가지 edge-case를 확인해야함. 수열의 어떤 요소 k에 대하여,&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arr[x-k]&lt;/code&gt;에서 array out of bounds 확인
+    &lt;ul&gt;
+      &lt;li&gt;x의 값이 2000000까지기 때문에, 첨부터 arr의 크기를 이만큼 설정하던지(arr[1000001]~arr[2000000]까지는 false로 고정일 것임.)&lt;/li&gt;
+      &lt;li&gt;따로 인덱스 값이 1000000 이상이면 예외처리를 해준다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;arr[x-k] == k&lt;/code&gt;인 경우에는 무조건 true처리가 돼버린다.
+    &lt;ul&gt;
+      &lt;li&gt;같을 경우에 예외처리를 해준다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;추천링크&quot;&gt;추천링크&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/3273&quot;&gt;3273) 두 수의 합 풀러가기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>Sunwoo Lee</name></author><category term="algorithm" /><summary type="html">Problem Overview</summary></entry><entry><title type="html">BOJ 2490) 윷놀이</title><link href="/algo_tips_3" rel="alternate" type="text/html" title="BOJ 2490) 윷놀이" /><published>2024-11-26T13:43:00+09:00</published><updated>2024-11-26T13:43:00+09:00</updated><id>/algo_tips_3</id><content type="html" xml:base="/algo_tips_3">&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;4개의 윷짝을 던져서 도(A), 개(B), 걸(C), 윷(D), 모(E)를 출력하는 문제이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;constraints&quot;&gt;Constraints&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;시간 제한(Seconds)&lt;/th&gt;
+      &lt;th&gt;메모리 제한(MB)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;128&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;noscript&gt;&lt;pre&gt;/*
+author: sunwoo.lee
+date: 11.26.2024
+*/
+#include &amp;lt;iostream&amp;gt;
+using namespace std;
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    
+    int n{3};
+    int num;
+    string result=&amp;quot;DCBAE&amp;quot;;
+    
+    while(n--)
+    {
+        int count{0};
+        for(int i{0};i&amp;lt;4;i++)
+        {
+            cin&amp;gt;&amp;gt;num;
+            if(num)
+                count++;
+        }
+        
+        cout&amp;lt;&amp;lt;result[count]&amp;lt;&amp;lt;&amp;#39;\n&amp;#39;;
+    }
+    
+    return 0;
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/Sunnew-Lee/fc2c112219538726791e490c600e3904.js&quot;&gt; &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;string을 만들어서 count를 index화 시켜서 출력시키는게 신박했던 풀이.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;추천링크&quot;&gt;추천링크&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2490&quot;&gt;2490) 윷놀이 풀러가기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>Sunwoo Lee</name></author><category term="algorithm" /><summary type="html">Problem Overview</summary></entry><entry><title type="html">BOJ 2480) 주사위 세개</title><link href="/algo_tips_2" rel="alternate" type="text/html" title="BOJ 2480) 주사위 세개" /><published>2024-11-26T13:08:00+09:00</published><updated>2024-11-26T13:08:00+09:00</updated><id>/algo_tips_2</id><content type="html" xml:base="/algo_tips_2">&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;1~6 눈을 가진 주사위 3개를 굴려서 모두 같은눈, 같은눈 2개, 모두 다른 눈이 나오는 경우에 따라서 다른 출력을 해주는 문제이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;constraints&quot;&gt;Constraints&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;시간 제한(Seconds)&lt;/th&gt;
+      &lt;th&gt;메모리 제한(MB)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;128&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;noscript&gt;&lt;pre&gt;/*
+author: sunwoo.lee
+date: 11.26.2024
+*/
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;unordered_set&amp;gt;
+using namespace std;
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    
+    int money{0};
+    int a,b,c;
+    cin&amp;gt;&amp;gt;a&amp;gt;&amp;gt;b&amp;gt;&amp;gt;c;
+    unordered_set&amp;lt;int&amp;gt; set{a,b,c};
+    int size = set.size();
+    
+    if(size == 3)
+    {
+        cout&amp;lt;&amp;lt;max({a,b,c})*100;
+    }
+    else if(size ==2)
+    {
+        if(a==b || a==c)
+            cout&amp;lt;&amp;lt;1000+a*100;
+        else
+            cout&amp;lt;&amp;lt;1000+b*100;
+    }
+    else
+    {
+        cout&amp;lt;&amp;lt;10000+a*1000;
+    }
+    
+    return 0;
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/Sunnew-Lee/5d94a6e3b02060118c97159c2b052283.js&quot;&gt; &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;다른 풀이야 많겠지만, set은 중복 인자가 삽입될 수 없다는 성질을 이용하여 set의 크기로 비교하는게 가장 직관적이라고 생각한다. And 와 Or 처리를 최소한으로 할 수 있다는 장점이 있다.&lt;/li&gt;
+  &lt;li&gt;unordered set을 사용한 이유는 set의 자동정렬 기능이 필요없기 때문이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;추천링크&quot;&gt;추천링크&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/2480&quot;&gt;2480) 주사위 세개 풀러가기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cplusplus.com/reference/unordered_set/unordered_set/&quot;&gt;unordered_set documentation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>Sunwoo Lee</name></author><category term="algorithm" /><summary type="html">Problem Overview</summary></entry><entry><title type="html">BOJ 10171) 고양이</title><link href="/algo_tips_1" rel="alternate" type="text/html" title="BOJ 10171) 고양이" /><published>2024-11-26T12:13:00+09:00</published><updated>2024-11-26T12:13:00+09:00</updated><id>/algo_tips_1</id><content type="html" xml:base="/algo_tips_1">&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;단순히 고양이를 출력시키면 통과하는 문제이다. 고양이는 아래와 같다.
+    &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;\    /\
+ )  ( ')
+(  /  )
+ \(__)|
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;문제는 특수기호들이 들어있어서 특수문자 처리해주기가 귀찮다는 점이다.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;constraints&quot;&gt;Constraints&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;시간 제한(Seconds)&lt;/th&gt;
+      &lt;th&gt;메모리 제한(MB)&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;256&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
+&lt;noscript&gt;&lt;pre&gt;/*
+author: sunwoo.lee
+date: 11.26.2024
+*/
+#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;string&amp;gt;
+using namespace std;
+
+int main()
+{
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    string answer = R&amp;quot;(\    /\
+ )  ( &amp;#39;)
+(  /  )
+ \(__)|)&amp;quot;;
+    
+    cout&amp;lt;&amp;lt;answer;
+    
+    return 0;
+}&lt;/pre&gt;&lt;/noscript&gt;
+&lt;script src=&quot;https://gist.github.com/Sunnew-Lee/fc92c97a4dbf7d3293dcf775423cd70e.js&quot;&gt; &lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;나는 특수기호 처리해주기 귀찮아서 Raw String Literal이라는 걸 사용했다. 특별한 처리없이 줄바꿈까지 그대로 출력해주기 때문에 편하다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;물론 아래 코드처럼 처리해줘도 가능하다.&lt;/p&gt;
+    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;    /&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'\n'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; )  ( &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;)&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'\n'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;(  /  )&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;'\n'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;(__)|&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;hr /&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;추천링크&quot;&gt;추천링크&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.acmicpc.net/problem/10171&quot;&gt;10171) 고양이 풀러가기&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://todamfather.tistory.com/85&quot;&gt;Raw String Literal 설명&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>Sunwoo Lee</name></author><category term="algorithm" /><summary type="html">Problem Overview</summary></entry><entry><title type="html">Array &amp;amp; STL vector</title><link href="/algo_array" rel="alternate" type="text/html" title="Array &amp;amp; STL vector" /><published>2024-11-25T21:42:00+09:00</published><updated>2024-11-25T21:42:00+09:00</updated><id>/algo_array</id><content type="html" xml:base="/algo_array">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Algorithm &amp;amp; Data Structure &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_tips&quot;&gt;코테 팁 모음&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_array&quot;&gt;Data Structure (1) - Array &amp;amp; STL vector&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_list&quot;&gt;Data Structure (2) - STL list&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;자료구조-1---array--stl-vector&quot;&gt;자료구조 (1) - Array &amp;amp; STL vector&lt;/h1&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-특성&quot;&gt;📌 &lt;strong&gt;특성&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Array와 vector의 가장 큰 차이는 container size의 변경유무이다.
+Array는 한번 크기를 지정해서 선언해버리면 고정돼버리지만, vector은 자유자재로 크기를 변경할 수 있다.
+그 외의 특성은 비슷하다:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;메모리 상 연속된 구간에 할당해야한다.(list 같은 경우는 불연속)
+    &lt;ul&gt;
+      &lt;li&gt;덕분에 Cache hit rate가 높다.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;메모리 overhead가 적다.(값만 저장)&lt;/li&gt;
+  &lt;li&gt;임의의 원소에 접근(Access) - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(1)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;값 탐색(Search) - 첫번째 원소부터 마지막까지 특정 값을 탐색한다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;삽입(Insertion) - 특정 자리에 원소를 삽입하면 뒤에있는 모든 원소들을 한칸씩 미뤄야한다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n)&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;제거(Deletion)- 특정 자리에 원소를 제거하면 뒤에있는 모든 원소들을 한칸씩 당겨야한다. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(n)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;vector&amp;gt;   // STL vector include
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;using&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;namespace&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// {}/{0} int 10칸 자동 0으로 채워짐&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;vector&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// int 10칸 0으로 채워짐&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//Access O(1)&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;c1&quot;&gt;//Search O(n)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;erase&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;begin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//Deletion O(n)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;push_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//Insertion이지만 마지막에 삽입이라 O(1)&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;pop_back&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;//Deletion이지만 마지막 인자 제거라 O(1)&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;문제풀이&quot;&gt;문제풀이&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;./algo_array_1&quot;&gt;BOJ 3273) 두 수의 합&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;./algo_array_2&quot;&gt;BOJ 1919) 애너그램 만들기&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;출처&quot;&gt;출처&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.encrypted.gg/927&quot;&gt;BaaaaaaaarkingDog님의 실전 알고리즘 강좌 0x03강 - 배열&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;추천-링크&quot;&gt;추천 링크&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://cplusplus.com/reference/vector/vector/&quot;&gt;vector의 메소드 확인&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>Sunwoo Lee</name></author><category term="algorithm" /><summary type="html">Algorithm &amp;amp; Data Structure 코테 팁 모음 Data Structure (1) - Array &amp;amp; STL vector Data Structure (2) - STL list</summary></entry><entry><title type="html">Coding Online Assesment tips</title><link href="/algo_tips" rel="alternate" type="text/html" title="Coding Online Assesment tips" /><published>2024-11-25T11:15:00+09:00</published><updated>2024-11-25T11:15:00+09:00</updated><id>/algo_tips</id><content type="html" xml:base="/algo_tips">&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Algorithm &amp;amp; Data Structure &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_tips&quot;&gt;코테 팁 모음&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_array&quot;&gt;Data Structure (1) - Array &amp;amp; STL vector&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_list&quot;&gt;Data Structure (2) - STL list&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;코테-팁-모음-&quot;&gt;코테 팁 모음 📘&lt;/h1&gt;
+&lt;p&gt;(11.25.2024 update)&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-include-bitsstdch-활용&quot;&gt;📌 &lt;strong&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;&lt;/code&gt; 활용&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#include &amp;lt;bits/stdc++.h&amp;gt;&lt;/code&gt;는 자주 사용하는 C++ 표준 라이브러리를 한 번에 포함해 시간을 절약할 수 있다. 대부분 알고리즘 사이트는 지원함.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;하지만 &lt;strong&gt;대표적인 헤더&lt;/strong&gt;는 기억해두자.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;기본 입출력&lt;/strong&gt;: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iostream&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;컨테이너&lt;/strong&gt;: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;vector&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;list&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stack&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;queue&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;알고리즘&lt;/strong&gt;: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;algorithm&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;numeric&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;문자열 처리&lt;/strong&gt;: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;string&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sstream&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;regex&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;맵과 셋&lt;/strong&gt;: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;map&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;set&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unordered_map&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unordered_set&lt;/code&gt;
+    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt; // 기본 입출력
+#include &amp;lt;algorithm&amp;gt; // 정렬 및 알고리즘
+#include &amp;lt;vector&amp;gt; // 동적 배열
+#include &amp;lt;string&amp;gt; // 문자열 처리
+#include &amp;lt;list&amp;gt; // 양방향 연결 리스트
+#include &amp;lt;stack&amp;gt; // 스택
+#include &amp;lt;queue&amp;gt; // 큐
+#include &amp;lt;map&amp;gt; // 정렬된 키-값 맵
+#include &amp;lt;unordered_map&amp;gt; // 해시 기반 맵
+#include &amp;lt;set&amp;gt; // 정렬된 집합
+#include &amp;lt;unordered_set&amp;gt; // 해시 기반 집합
+#include &amp;lt;sstream&amp;gt; // 문자열 스트림(빈도↓)
+#include &amp;lt;regex&amp;gt; // 정규 표현식(빈도↓)
+#include &amp;lt;numeric&amp;gt; // 수학 함수(acuumulate, iota)
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;hr /&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;-빠른-입출력-설정&quot;&gt;📌 &lt;strong&gt;빠른 입출력 설정&lt;/strong&gt;&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;백준 문제의 대부분은 &lt;strong&gt;표준 입출력&lt;/strong&gt;을 사용한다.(매우 귀찮음)&lt;/li&gt;
+  &lt;li&gt;C++는 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;std::ios::sync_with_stdio(0)&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;std::cin.tie(0)&lt;/code&gt;&lt;strong&gt;입출력 속도를 최적화&lt;/strong&gt;하자:&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;💡 Tip:
+    &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;std::endl&lt;/code&gt;은 매번 출력 버퍼를 flush하므로, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;'\n'&lt;/code&gt;를 사용하는 것이 더 효율적이다.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;iostream&amp;gt;
+&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ios&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sync_with_stdio&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// C와 C++ 스트림 동기화 해제(false)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tie&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;           &lt;span class=&quot;c1&quot;&gt;// 입력과 출력 버퍼의 동기화 해제(nullptr)&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;이것은 예시코드입니다.&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-시간-및-공간-복잡도&quot;&gt;📌 시간 및 공간 복잡도&lt;/h2&gt;
+
+&lt;h3 id=&quot;시간-복잡도&quot;&gt;시간 복잡도&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;문제의 시간 제한과 입력 크기를 기반으로 효율적인 알고리즘 설계가 필요함.&lt;/li&gt;
+  &lt;li&gt;반복문 뿐만 아니라 함수 인자의 복사도 성능에 영향을 줄 수 있음.
+(ex: container 전달 시 &amp;amp; 사용 권장)&lt;/li&gt;
+  &lt;li&gt;Worst-Case를 다루고 통상적으로 순서는 다음과 같다:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(1)&lt;/code&gt; &amp;lt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(logN)&lt;/code&gt; &amp;lt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(sqrt(N))&lt;/code&gt; &amp;lt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(N)&lt;/code&gt; &amp;lt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(NlogN)&lt;/code&gt; &amp;lt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(N^2)&lt;/code&gt; &amp;lt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(2^N)&lt;/code&gt; &amp;lt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(N!)&lt;/code&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;각 Big-O 시간복잡도에 따른 대표적인 알고리즘/코드
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(1)&lt;/code&gt; 상수 시간(constant)
+        &lt;ul&gt;
+          &lt;li&gt;배열에서 임의의 인덱스 접근, 스택의 top(), 해쉬 테이블의 find()/count()&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(logN)&lt;/code&gt; 로그 시간(logarithmic)
+        &lt;ul&gt;
+          &lt;li&gt;Binary Search, Balanced BST의 노드삽입, 삭제, 탐색, Binary Heap(priority queue) 삽입, 최소/최대값 제거&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(sqrt(N))&lt;/code&gt; 분수 지수(fractional power)
+        &lt;ul&gt;
+          &lt;li&gt;소수판별, 약수 구하기&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(N)&lt;/code&gt; 선형 시간(linear)
+        &lt;ul&gt;
+          &lt;li&gt;배열의 합, Max/Min 찾기, BFS/DFS&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(NlogN)&lt;/code&gt; 선형 로그 시간(linearithmic)
+        &lt;ul&gt;
+          &lt;li&gt;Merge Sort, Quick Sort, 최소 스패닝 트리(Krudkal’s Algorithm)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(N^2)&lt;/code&gt; 이차 시간(quadratic)
+        &lt;ul&gt;
+          &lt;li&gt;Bubble Sort, LCS, 플로이드-워셜 알고리즘&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(2^N)&lt;/code&gt; 지수 시간(exponential)
+        &lt;ul&gt;
+          &lt;li&gt;피보나치 수열(재귀), 부분집합 생성, 외판원 문제(TSP)&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;O(N!)&lt;/code&gt; 팩토리얼 시간(factorial)
+        &lt;ul&gt;
+          &lt;li&gt;순열 생성, N-Queens, TSP&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;공간-복잡도&quot;&gt;공간 복잡도&lt;/h3&gt;
+&lt;p&gt;메모리 제한을 보고 대략적으로 int 몇개 사용가능한지 계산해보자:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;1 int ≈ 4 bytes&lt;/li&gt;
+  &lt;li&gt;1 MB ≈ 1000 KB ≈ 1000 × 1000 bytes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;-정수-자료형&quot;&gt;📌 정수 자료형&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;기본적으로 int는 약 21억(±2,147,483,647) 범위를 가짐.&lt;/li&gt;
+  &lt;li&gt;초과할 가능성이 있으면 unsigned 또는 long long(±9경) 사용.(long은 변동성 있어서 X)&lt;/li&gt;
+  &lt;li&gt;long long을 초과하는 경우, 정수를 문자열로 변환하자.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;자료형&lt;/th&gt;
+      &lt;th&gt;크기 (Bytes)&lt;/th&gt;
+      &lt;th&gt;최소값&lt;/th&gt;
+      &lt;th&gt;최대값&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bool&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;false (0)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;true (1)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;char&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-128(-2^7)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;127(2^7-1)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unsigned char&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;255(2^8-1)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;short&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-32,768(-2^15)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;32,767(2^15-1)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unsigned short&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;65,535&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;int&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-2,147,483,648&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2,147,483,647(2^31-1)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unsigned int&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4,294,967,295&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;long&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4 (32-bit)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-2,147,483,648&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2,147,483,647&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8 (64-bit)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-9,223,372,036,854,775,808&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;9,223,372,036,854,775,807(2^63-1)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unsigned long&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4 (32-bit)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4,294,967,295&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8 (64-bit)&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;18,446,744,073,709,551,615&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;long long&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-9,223,372,036,854,775,808&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;9,223,372,036,854,775,807(2^63-1)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;unsigned long long&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;18,446,744,073,709,551,615(2^64-1)&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;문제풀이&quot;&gt;문제풀이&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;./algo_tips_1&quot;&gt;BOJ 10171) 고양이&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;./algo_tips_2&quot;&gt;BOJ 2480) 주사위 세개&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;./algo_tips_3&quot;&gt;BOJ 2490) 윷놀이&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;출처&quot;&gt;출처&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://blog.encrypted.gg/921&quot;&gt;BaaaaaaaarkingDog님의 실전 알고리즘 강좌 0x00~0x02강&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;추천링크&quot;&gt;추천링크&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.bigocheatsheet.com/&quot;&gt;자료구조 별 시간/공간 복잡도&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://docs.google.com/document/d/17OUl9nU9i7vTkhk2q_qy4Q5Vl0HHE9bTLUHwbLp56WM/edit?usp=sharing&quot;&gt;빠른 입출력 모음 팁&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;</content><author><name>Sunwoo Lee</name></author><category term="algorithm" /><summary type="html">Algorithm &amp;amp; Data Structure 코테 팁 모음 Data Structure (1) - Array &amp;amp; STL vector Data Structure (2) - STL list</summary></entry></feed>

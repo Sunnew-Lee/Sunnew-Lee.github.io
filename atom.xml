@@ -8,20 +8,166 @@
     
       
       <item>
-        <title>algorithm no.1</title>
+        <title>BOJ 1158) 요세푸스 문제</title>
         
-          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Algorithm 강좌는 여러 절로 구성되어 있습니다. &lt;/span&gt;&lt;/p&gt;
+          <description>&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Wed, 27 Nov 2024 01:27:00 +0900</pubDate>
+        <link>
+        /algo_list_2</link>
+        <guid isPermaLink="true">/algo_list_2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>BOJ 1406) 에디터</title>
+        
+          <description>&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Wed, 27 Nov 2024 01:16:00 +0900</pubDate>
+        <link>
+        /algo_list_1</link>
+        <guid isPermaLink="true">/algo_list_1</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>STL list</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Algorithm &amp;amp; Data Structure &lt;/span&gt;&lt;/p&gt;
 &lt;ul class=&quot;table-of-contents-list&quot;&gt;
-    &lt;li&gt;&lt;a href=&quot;./algo_hi&quot;&gt;Algorithm 강좌(1) - 리포지토리 만들기&lt;/a&gt;&lt;/li&gt;
-    &lt;!-- &lt;li&gt;&lt;a href=&quot;./gitpage_1&quot;&gt;Algorithm 강좌(2) - 나만의 블로그 만들기&lt;/a&gt;&lt;/li&gt; --&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_tips&quot;&gt;코테 팁 모음&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_array&quot;&gt;Data Structure (1) - Array &amp;amp; STL vector&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_list&quot;&gt;Data Structure (2) - STL list&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
         
-        <pubDate>Sat, 23 Nov 2024 21:25:00 +0900</pubDate>
+        <pubDate>Wed, 27 Nov 2024 00:01:00 +0900</pubDate>
         <link>
-        /algo_hi</link>
-        <guid isPermaLink="true">/algo_hi</guid>
+        /algo_list</link>
+        <guid isPermaLink="true">/algo_list</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>BOJ 1919) 애너그램 만들기</title>
+        
+          <description>&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Tue, 26 Nov 2024 23:47:00 +0900</pubDate>
+        <link>
+        /algo_array_2</link>
+        <guid isPermaLink="true">/algo_array_2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>BOJ 3273) 두 수의 합</title>
+        
+          <description>&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Tue, 26 Nov 2024 16:14:00 +0900</pubDate>
+        <link>
+        /algo_array_1</link>
+        <guid isPermaLink="true">/algo_array_1</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>BOJ 2490) 윷놀이</title>
+        
+          <description>&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Tue, 26 Nov 2024 13:43:00 +0900</pubDate>
+        <link>
+        /algo_tips_3</link>
+        <guid isPermaLink="true">/algo_tips_3</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>BOJ 2480) 주사위 세개</title>
+        
+          <description>&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Tue, 26 Nov 2024 13:08:00 +0900</pubDate>
+        <link>
+        /algo_tips_2</link>
+        <guid isPermaLink="true">/algo_tips_2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>BOJ 10171) 고양이</title>
+        
+          <description>&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Tue, 26 Nov 2024 12:13:00 +0900</pubDate>
+        <link>
+        /algo_tips_1</link>
+        <guid isPermaLink="true">/algo_tips_1</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Array &amp; STL vector</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Algorithm &amp;amp; Data Structure &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_tips&quot;&gt;코테 팁 모음&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_array&quot;&gt;Data Structure (1) - Array &amp;amp; STL vector&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_list&quot;&gt;Data Structure (2) - STL list&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Mon, 25 Nov 2024 21:42:00 +0900</pubDate>
+        <link>
+        /algo_array</link>
+        <guid isPermaLink="true">/algo_array</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>Coding Online Assesment tips</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Algorithm &amp;amp; Data Structure &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_tips&quot;&gt;코테 팁 모음&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_array&quot;&gt;Data Structure (1) - Array &amp;amp; STL vector&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_list&quot;&gt;Data Structure (2) - STL list&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Mon, 25 Nov 2024 11:15:00 +0900</pubDate>
+        <link>
+        /algo_tips</link>
+        <guid isPermaLink="true">/algo_tips</guid>
       </item>
       
     
