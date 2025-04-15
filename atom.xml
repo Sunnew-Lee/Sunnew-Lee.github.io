@@ -8,6 +8,87 @@
     
       
       <item>
+        <title>BOJ 17298) 오큰수</title>
+        
+          <description>&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Sat, 04 Jan 2025 04:12:00 +0900</pubDate>
+        <link>
+        /algo_stack_4</link>
+        <guid isPermaLink="true">/algo_stack_4</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>BOJ 6198) 옥상 정원 꾸미기/Bad Hair Day</title>
+        
+          <description>&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Wed, 18 Dec 2024 20:08:00 +0900</pubDate>
+        <link>
+        /algo_stack_3</link>
+        <guid isPermaLink="true">/algo_stack_3</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>BOJ 2493) 탑</title>
+        
+          <description>&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Mon, 16 Dec 2024 18:12:00 +0900</pubDate>
+        <link>
+        /algo_stack_2</link>
+        <guid isPermaLink="true">/algo_stack_2</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>BOJ 1874) 스택 수열</title>
+        
+          <description>&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
+
+</description>
+        
+        <pubDate>Sun, 15 Dec 2024 22:51:00 +0900</pubDate>
+        <link>
+        /algo_stack_1</link>
+        <guid isPermaLink="true">/algo_stack_1</guid>
+      </item>
+      
+    
+      
+      <item>
+        <title>STL stack</title>
+        
+          <description>&lt;p&gt;&lt;span class=&quot;table-of-contents-list&quot;&gt;Algorithm &amp;amp; Data Structure &lt;/span&gt;&lt;/p&gt;
+&lt;ul class=&quot;table-of-contents-list&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_tips&quot;&gt;코테 팁 모음&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_array&quot;&gt;Data Structure (1) - Array &amp;amp; STL vector&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_list&quot;&gt;Data Structure (2) - STL list&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_stack&quot;&gt;Data Structure (3) - STL stack&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        
+        <pubDate>Sun, 15 Dec 2024 21:21:00 +0900</pubDate>
+        <link>
+        /algo_stack</link>
+        <guid isPermaLink="true">/algo_stack</guid>
+      </item>
+      
+    
+      
+      <item>
         <title>BOJ 1158) 요세푸스 문제</title>
         
           <description>&lt;h2 id=&quot;problem-overview&quot;&gt;Problem Overview&lt;/h2&gt;
@@ -45,6 +126,7 @@
     &lt;li&gt;&lt;a href=&quot;./algo_tips&quot;&gt;코테 팁 모음&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./algo_array&quot;&gt;Data Structure (1) - Array &amp;amp; STL vector&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./algo_list&quot;&gt;Data Structure (2) - STL list&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_stack&quot;&gt;Data Structure (3) - STL stack&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -140,6 +222,7 @@
     &lt;li&gt;&lt;a href=&quot;./algo_tips&quot;&gt;코테 팁 모음&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./algo_array&quot;&gt;Data Structure (1) - Array &amp;amp; STL vector&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./algo_list&quot;&gt;Data Structure (2) - STL list&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_stack&quot;&gt;Data Structure (3) - STL stack&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>
@@ -160,6 +243,7 @@
     &lt;li&gt;&lt;a href=&quot;./algo_tips&quot;&gt;코테 팁 모음&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./algo_array&quot;&gt;Data Structure (1) - Array &amp;amp; STL vector&lt;/a&gt;&lt;/li&gt;
     &lt;li&gt;&lt;a href=&quot;./algo_list&quot;&gt;Data Structure (2) - STL list&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;./algo_stack&quot;&gt;Data Structure (3) - STL stack&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 </description>

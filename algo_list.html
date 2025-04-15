@@ -51,7 +51,7 @@
     <meta property="og:site_name" content="Sunwoo Lee's Blog" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="STL list" />
-    <meta property="og:description" content="Algorithm &amp; Data Structure 코테 팁 모음 Data Structure (1) - Array &amp; STL vector Data Structure (2) - STL list 자료구조 (2) - STL list 📌 특성 List 자료구조의 특성은 다음과 같다: 메모리 상 원소들이 불연속해서 할당이 비교적 쉽다. 배열, STL vector와의 가장 큰 차이점이다. 불연속하기 때문에 Cache hit" />
+    <meta property="og:description" content="Algorithm &amp; Data Structure 코테 팁 모음 Data Structure (1) - Array &amp; STL vector Data Structure (2) - STL list Data Structure (3) - STL stack 자료구조 (2) - STL list 📌 특성 List 자료구조의 특성은 다음과 같다: 메모리 상 원소들이 불연속해서 할당이 비교적 쉽다. 배열, STL vector와의 가장" />
     <meta property="og:url" content="/algo_list" />
     <meta property="og:image" content="/assets/images/summit.jpg" />
     <meta property="article:publisher" content="https://www.facebook.com/" />
@@ -61,7 +61,7 @@
     <meta property="article:tag" content="Algorithm" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="STL list" />
-    <meta name="twitter:description" content="Algorithm &amp; Data Structure 코테 팁 모음 Data Structure (1) - Array &amp; STL vector Data Structure (2) - STL list 자료구조 (2) - STL list 📌 특성 List 자료구조의 특성은 다음과 같다: 메모리 상 원소들이 불연속해서 할당이 비교적 쉽다. 배열, STL vector와의 가장 큰 차이점이다. 불연속하기 때문에 Cache hit" />
+    <meta name="twitter:description" content="Algorithm &amp; Data Structure 코테 팁 모음 Data Structure (1) - Array &amp; STL vector Data Structure (2) - STL list Data Structure (3) - STL stack 자료구조 (2) - STL list 📌 특성 List 자료구조의 특성은 다음과 같다: 메모리 상 원소들이 불연속해서 할당이 비교적 쉽다. 배열, STL vector와의 가장" />
     <meta name="twitter:url" content="/" />
     <meta name="twitter:image" content="/assets/images/summit.jpg" />
     <meta name="twitter:label1" content="Written by" />
@@ -93,7 +93,7 @@
         "@type": "WebPage",
         "@id": "/algo_list"
     },
-    "description": "Algorithm &amp; Data Structure 코테 팁 모음 Data Structure (1) - Array &amp; STL vector Data Structure (2) - STL list 자료구조 (2) - STL list 📌 특성 List 자료구조의 특성은 다음과 같다: 메모리 상 원소들이 불연속해서 할당이 비교적 쉽다. 배열, STL vector와의 가장 큰 차이점이다. 불연속하기 때문에 Cache hit"
+    "description": "Algorithm &amp; Data Structure 코테 팁 모음 Data Structure (1) - Array &amp; STL vector Data Structure (2) - STL list Data Structure (3) - STL stack 자료구조 (2) - STL list 📌 특성 List 자료구조의 특성은 다음과 같다: 메모리 상 원소들이 불연속해서 할당이 비교적 쉽다. 배열, STL vector와의 가장"
 }
     </script>
 
@@ -203,6 +203,7 @@ into the {body} of the default.hbs template -->
     <li><a href="./algo_tips">코테 팁 모음</a></li>
     <li><a href="./algo_array">Data Structure (1) - Array &amp; STL vector</a></li>
     <li><a href="./algo_list">Data Structure (2) - STL list</a></li>
+    <li><a href="./algo_stack">Data Structure (3) - STL stack</a></li>
 </ul>
 
 <hr />
@@ -403,7 +404,7 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/algo_list_2">BOJ 1158) 요세푸스 문제</a></li>
+                                            <li><a href="/algo_stack_4">BOJ 17298) 오큰수</a></li>
                                         
                                     
                                   
@@ -412,7 +413,44 @@ into the {body} of the default.hbs template -->
                                     
                                         
                                         
-                                            <li><a href="/algo_list_1">BOJ 1406) 에디터</a></li>
+                                            <li><a href="/algo_stack_3">BOJ 6198) 옥상 정원 꾸미기/Bad Hair Day</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                            <li><a href="/algo_stack_2">BOJ 2493) 탑</a></li>
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
+                                        
+                                    
+                                  
+                                
+                                  
+                                    
+                                        
                                         
                                     
                                   
@@ -424,8 +462,6 @@ into the {body} of the default.hbs template -->
                                   
                                     
                                         
-                                        
-                                            <li><a href="/algo_array_2">BOJ 1919) 애너그램 만들기</a></li>
                                         
                                     
                                   
@@ -489,7 +525,7 @@ into the {body} of the default.hbs template -->
                         <footer class="read-next-card-footer">
                             <a href="/tag/algorithm/">
                                 
-                                    See all 9 posts  →
+                                    See all 14 posts  →
                                 
                             </a>
                         </footer>
@@ -654,7 +690,7 @@ into the {body} of the default.hbs template -->
         <!-- The footer at the very bottom of the screen -->
         <footer class="site-footer outer">
             <div class="site-footer-content inner">
-                <section class="copyright"><a href="/">Sunwoo Lee's Blog</a> &copy; 2024</section>
+                <section class="copyright"><a href="/">Sunwoo Lee's Blog</a> &copy; 2025</section>
                 <section class="poweredby">Proudly published with <a href="https://jekyllrb.com/">Jekyll</a> &
                     <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a> using
                     <a href="https://github.com/jekyllt/jasper2" target="_blank" rel="noopener">Jasper2</a></section>
